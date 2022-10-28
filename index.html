@@ -21,21 +21,20 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-X1E8TVLFY9"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-X1E8TVLFY9');
 </script>
 <body class="landing-page sidebar-collapse">
-  <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100"
-    id="sectionsNav">
+  <nav class="navbar navbar-nav fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
     <div class="container">
       <div class="navbar-translate">
-        <div class="col-md-5 ml-auto mr-auto">
-          <img src="./assets/img/faces/PACALO-LOGO.jpg" 
-          class="img-fluid" alt="Responsive image"alt="Thumbnail Image">
+        <div class="pac-logo">
+          <img href="/" src="./assets/img/faces/PACALO-LOGO.jpg" class="img-fluid" alt="Responsive image"
+            alt="Thumbnail Image">
         </div>
-        
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
           aria-label="Toggle navigation">
           <span class="sr-only">Toggle navigation</span>
@@ -46,41 +45,27 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
-          <li class="dropdown nav-item">
-            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+          <li class="nav-item">
+            <a href="#services" class="nav-link">
               Services
             </a>
-            <div class="dropdown-menu dropdown-with-icons">
-              <a class="dropdown-item">
-                <i class="material-icons">airport_shuttle</i> Service Car
-              </a>
-              <a class="dropdown-item">
-                <i class="material-icons">phonelink</i> Prescription Pickup
-              </a>
-              <a class="dropdown-item">
-                <i class="material-icons">admin_panel_settings</i> Advanced Wheelchair Service
-              </a>
-            </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">
+            <a href="#partner" class="nav-link">
               Our Partners
             </a>
           </li>
           <li class="nav-item">
-            
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="">
-              About
+            <a href="#team" class="nav-link">
+              About Us
             </a>
           </li>
           <li class="nav-item">
-            <a href="#contact" class="nav-link" href="">
+            <a href="#contact" class="nav-link">
               Contact
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item pac-contact-us">
             <a class="nav-link">
               <i class="fa fa-phone"></i>309-307-4564
             </a>
@@ -89,19 +74,18 @@
       </div>
     </div>
   </nav>
-  <div class="page-header header-filter" data-parallax="true" style="background-image: url('./assets/img/OSFBW.jpg')">
+  <div class="page-header pac-page-header header-filter" data-parallax="true"
+    style="background-image: url('./assets/img/OSFBW.jpg')">
     <div class="container">
-      <div class="row text-center">
-        <div class="col-md-6 mx-auto">
-          <h2 class="title">Reliable, trustworthy and affordable non-emergency medical transportation-NEMT</h2>
-          <h4>Offering the best Rates in & around Bloomington-Normal!</h4>
-          <h5> <i class="fa fa-envelope"></i> ride@pacalo.net </h5>
-          <h5> <i class="fa fa-phone"></i> 309-307-4564</h5>
-          
-          <br>
-          <a href="#services" class="btn btn-info btn-raised btn-lg">
-            Learn More
-          </a>
+      <div class="row">
+        <div class="col-md-7 text-left">
+          <h1 class="pac-title">Reliable, trustworthy and affordable non-emergency medical transportation-NEMT</h1>
+          <h4 class="pac-description">On-Demand & Scheduled
+            Assisted Transportation offering the best rates in & around Bloomington-Normal</h4>
+        </div>
+        <div class="pac-contact-us col-md-5 text-right">
+          <h2> <i class="fa fa-envelope"></i> ride@pacalo.net </h2>
+          <h2> <i class="fa fa-phone"></i> 309-307-4564</h2>
         </div>
       </div>
     </div>
@@ -112,7 +96,8 @@
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto">
             <h2 class="title">Services</h2>
-            <h5 class="description">PACALO Medical Transportation is an Illinois State Certified Medical Services Provider. 
+            <h5 class="description">PACALO Medical Transportation is an Illinois State Certified Medical Services
+              Provider.
               We are a community service Transportation provider serving the BLONO area.
               Call us for the best Transportation expirience around. Quality Customer Service, Comfort and Care</h5>
           </div>
@@ -126,11 +111,9 @@
                 </div>
                 <h4 class="info-title">Service Car </h4>
                 <p>Have a short term or long term medical appointment you do not want to miss??
-                  Call us and we will make sure you get there as on time so using our clean & comfortable Service Cars.</p>
+                  Call us and we will make sure you get there as on time so using our clean & comfortable Service Cars.
+                </p>
               </div>
-              <a target="_blank" class="btn btn-info btn-raised">
-                Learn More
-              </a>
             </div>
             <div class="col-md-4">
               <div class="info">
@@ -138,12 +121,9 @@
                   <i class="material-icons">admin_panel_settings</i>
                 </div>
                 <h4 class="info-title">Prescription Pick Up</h4>
-                <p>Want to get your Prescription processed in time? 
+                <p>Want to get your Prescription processed in time?
                   Call us for timely prescription refills and occasional pharmaceteucal needs.</p>
               </div>
-              <a target="_blank" class="btn btn-info btn-raised">
-                Learn More
-              </a>
             </div>
             <div class="col-md-4">
               <div class="info">
@@ -152,17 +132,15 @@
                 </div>
                 <h4 class="info-title">Advanced Handicap Service</h4>
                 <p>Looking for a patient provider who understands some of your small and unique challenges?
-                  Our Handicapped team will keep you engaged the whole way and keep you smilling until the next time you see them again.
+                  Our Handicapped team will keep you engaged the whole way and keep you smilling until the next time you
+                  see them again.
                 </p>
               </div>
-              <a target="_blank" class="btn btn-info btn-raised">
-                Learn More
-              </a>
             </div>
           </div>
         </div>
       </div>
-      <div class="section text-center">
+      <div id="partner" class="section text-center">
         <h2 class="title">Our Partners</h2>
         <div class="team">
           <div class="row">
@@ -184,7 +162,7 @@
           </div>
         </div>
       </div>
-      <div class="section text-center">
+      <div id="team" class="section text-center">
         <h2 class="title">Meet the team</h2>
         <div class="team">
           <div class="row">
@@ -200,12 +178,12 @@
                     <small class="card-description text-muted">Operator</small>
                   </h4>
                   <div class="card-body">
-                    <p class="card-description">The brains behind our organisation! Arnold is an 
-                      enthusiastic individual with a strong sense of self, strenghth and community. 
+                    <p class="card-description">The brains behind our organisation! Arnold is an
+                      enthusiastic individual with a strong sense of self, strenghth and community.
                       Favorite Quote: 'Put a smile on your face, dont let the troubles knock you down!!'
-                      </p>
+                    </p>
                   </div>
-                  
+
                 </div>
               </div>
             </div>
@@ -221,13 +199,14 @@
                     <small class="card-description text-muted">Operations</small>
                   </h4>
                   <div class="card-body">
-                    <p class="card-description">The eversmiling Panashe, this dude will keep you company throughout your ride. 
+                    <p class="card-description">The eversmiling Panashe, this dude will keep you company throughout your
+                      ride.
                       You have to be one of the lucky ones to get service from him.
                       Favorite Quote: I love you!!
 
                     </p>
                   </div>
-                  
+
                 </div>
               </div>
             </div>
@@ -243,25 +222,24 @@
                     <small class="card-description text-muted">Operations</small>
                   </h4>
                   <div class="card-body">
-                    <p class="card-description">The engine behind the brains! Violet is the day to day Manager making sure that all appointments are on time.
-                      She plays the most important part in our orgaization, making sure service is delived. 
+                    <p class="card-description">The engine behind the brains! Violet is the day to day Manager making
+                      sure that all appointments are on time.
+                      She plays the most important part in our orgaization, making sure service is delived.
                     </p>
                   </div>
-                  
+
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <a target="_blank" class="btn btn-info btn-raised">
-          Learn More
-        </a>
       </div>
       <div id="contact" class="section section-contacts">
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto">
             <h2 class="text-center title">Work with us</h2>
-            <h4 class="text-center description">Questions on availability, rates, schedule..send us a quick note & we will promptly respond!</h4>
+            <h4 class="text-center description">Questions on availability, rates, schedule..send us a quick note & we
+              will promptly respond!</h4>
             <form class="contact-form">
               <div class="row">
                 <div class="col-md-6">
@@ -308,7 +286,7 @@
               About Us
             </a>
           </li>
-          
+
         </ul>
       </nav>
       <div class="copyright float-right">
