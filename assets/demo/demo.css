@@ -7,12 +7,54 @@
   margin-bottom: 20px;
 }
 
+.pac-logo {
+width: 200px;
+}
+
 .presentation-page {
   overflow-x: hidden;
 }
 
 .tim-white-buttons {
   background-color: #777777;
+}
+
+.pac-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: normal;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.pac-description {
+  font-size: 18px;
+}
+
+
+
+.pac-contact-us {
+  font-weight: bold;
+}
+
+.navbar-nav a {
+  font-size: 16px!important;
+  font-weight: 600!important;
+  padding-top: 2px;
+}
+
+.navbar-nav .pac-contact-us {
+  font-weight: bold;
+  font-size: 20px!important;
+  font-weight: 600!important;
+  color: #1d4d31;
+  border: 1px solid #1d4d31;  
+  border-radius: 12px;
+}
+
+.navbar-nav .pac-contact-us a {
+  font-size: 20px!important;
+  font-weight: 600!important;
 }
 
 .title {
@@ -22,6 +64,10 @@
   /*position: relative;
     display: inline-block;
     width: 100%;*/
+}
+
+.pac-page-header {
+  height: 550px;
 }
 
 .title.text-center {
