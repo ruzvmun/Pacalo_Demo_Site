@@ -7,6 +7,10 @@
   margin-bottom: 20px;
 }
 
+.pac-grey-1 {
+background-color: #EEE;
+}
+
 .pac-logo {
 width: 200px;
 }
@@ -26,6 +30,18 @@ width: 200px;
   letter-spacing: normal;
   font-family: 'Open Sans', sans-serif;
 }
+
+.pac-image {
+  font-size: 40px;
+  height: 60px;
+  overflow: hidden;
+}
+
+.pac-image img {
+    height: 100%;
+  }
+
+
 
 .pac-description {
   font-size: 18px;
