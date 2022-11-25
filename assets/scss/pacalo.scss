@@ -1,0 +1,273 @@
+@import "material-kit";
+
+.pac-grey-1 {
+  background-color: #eee;
+}
+
+.pac-page-header {
+  height: 550px;
+  text-align: left;
+  .pac-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: normal;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  .pac-description {
+    font-size: 18px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    height: 400px;
+    margin-top: 50px;
+    text-align: center;
+    .pac-title {
+      font-size: 24px;
+    }
+    .pac-description {
+      font-size: 14px;
+    }
+  }
+}
+
+.pac-contact-row {
+  height: 150px;
+  background-color: #3b5998;
+
+  .pac-card {
+    padding: 12px 8px;
+    color: #eee;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+
+    .pac-icon {
+      width: 100%;
+      text-align: center;
+      font-size: 40px;
+    }
+
+    .pac-body {
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    h4 {
+      margin: 4px 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    a {
+      color: #c2e4f0 !important;
+      &:hover {
+        color: #94bbca !important;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    height: 100px;
+
+    .col-6 {
+      padding: 0 2px;
+    }
+
+    .pac-card {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-items: left;
+      padding: 8px 8px;
+      text-align: left;
+
+      .pac-icon {
+        width: 25px;
+        font-size: 20px;
+      }
+
+      .pac-body {
+        flex: 1;
+        font-size: 10px;
+        h4 {
+          margin: 2px 0;
+          font-size: 10px;
+          font-weight: bold;
+        }
+        h6 {
+          margin: 2px 0;
+          text-transform: capitalize;
+          font-size: 10px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.pac-logo {
+  width: 200px;
+}
+
+.presentation-page {
+  overflow-x: hidden;
+}
+
+.tim-white-buttons {
+  background-color: #777777;
+}
+
+.pac-image {
+  font-size: 40px;
+  height: 60px;
+  overflow: hidden;
+}
+
+.pac-image img {
+  height: 100%;
+}
+
+.pac-contact-us {
+  font-weight: bold;
+}
+
+.navbar-nav a {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  padding-top: 2px;
+}
+
+.navbar-nav {
+  .pac-contact-us {
+    font-weight: bold;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    color: #1d4d31;
+    border: 1px solid #1d4d31;
+    border-radius: 12px;
+
+    a {
+      font-size: 20px !important;
+      font-weight: 600 !important;
+    }
+  }
+}
+
+.title {
+  margin-top: 30px;
+  /*margin-bottom: 25px;*/
+  min-height: 32px;
+  /*position: relative;
+    display: inline-block;
+    width: 100%;*/
+}
+
+#notifications {
+  background-color: #ffffff;
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+#notifications .alert-danger {
+  margin-bottom: 0px;
+}
+
+.tim-note {
+  text-transform: capitalize;
+}
+
+#buttons .btn {
+  margin: 0 0px 15px;
+}
+
+.space-100 {
+  height: 100px;
+  display: block;
+  width: 100%;
+}
+
+.be-social {
+  padding-bottom: 20px;
+  /*     border-bottom: 1px solid #aaa; */
+  margin: 0 auto 40px;
+}
+
+.txt-white {
+  color: #ffffff;
+}
+
+.txt-gray {
+  color: #ddd !important;
+}
+
+.parallax {
+  width: 100%;
+  height: 570px;
+
+  display: block;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.logo-container .logo {
+  overflow: hidden;
+  border-radius: 50%;
+  border: 1px solid #333333;
+  width: 50px;
+  float: left;
+}
+
+.logo-container .brand {
+  font-size: 16px;
+  line-height: 18px;
+  float: left;
+  margin-left: 10px;
+  margin-top: 7px;
+  color: #fff;
+  width: 70px;
+  height: 40px;
+  text-align: left;
+}
+
+.navbar-default .logo-container .brand {
+  color: #999999;
+}
+
+.navbar-transparent .logo-container .brand {
+  color: #ffffff;
+}
+
+.logo-container .brand-material {
+  font-size: 18px;
+  margin-top: 15px;
+  height: 25px;
+  width: auto;
+}
+
+.logo-container .logo img {
+  width: 100%;
+}
+
+.navbar-small .logo-container .brand {
+  color: #333333;
+}
+
+.parallax .parallax-image {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.parallax .parallax-image img {
+  width: 100%;
+}
+
+#images h4 {
+  margin-bottom: 30px;
+}
