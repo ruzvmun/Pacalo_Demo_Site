@@ -1,4 +1,18 @@
 @import "material-kit";
+$primary-color: #0f3664f2;
+$accent-color: #f2ba14;
+
+@mixin deep-width($number) {
+  width: $number;
+  min-width: $number;
+  max-width: $number;
+}
+
+@mixin deep-height($number) {
+  height: $number;
+  min-height: $number;
+  max-height: $number;
+}
 
 .pac-grey-1 {
   background-color: #eee;
@@ -8,37 +22,115 @@
   height: 550px;
   text-align: left;
   .pac-title {
-    font-size: 36px;
+    margin-top: 100px;
+    font-size: 32px;
     font-weight: bold;
     margin-bottom: 20px;
     letter-spacing: normal;
     font-family: "Open Sans", sans-serif;
+    strong {
+      font-size: 44px;
+      color: $accent-color;
+    }
   }
 
   .pac-description {
-    font-size: 18px;
+    font-size: 16px;
+  }
+
+  .pac-partner-row {
+    padding: 0 24px 0 0;
+    margin-top: 50px;
+    .pac-card {
+      padding-right: 12px;
+      width: 25%;
+      a {
+        width: 100%;
+      }
+      img {
+        width: 80%;
+      }
+    }
   }
 
   @include media-breakpoint-down(sm) {
-    height: 400px;
+    height: 300px;
     margin-top: 50px;
     text-align: center;
     .pac-title {
       font-size: 24px;
+      strong {
+        font-size: 30px;
+        color: $accent-color;
+      }
     }
     .pac-description {
       font-size: 14px;
+    }
+
+    .pac-partner-row {
+      padding: 0 10px 0 0;
+      margin-top: 15px;
+      .pac-card {
+        padding-right: 12px;
+        a {
+          width: 100%;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .pac-book-us {
+    padding-top: 50px;
+    justify-items: end;
+    align-items: flex-end;
+    color: #e5e5e5;
+    h3 {
+      font-weight: bold;
+    }
+    img {
+      height: 300px;
+      width: initial;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+      visibility: hidden;
+      @include deep-height(0);
+    }
+  }
+}
+
+.pac-partner-container {
+  width: 70%;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+}
+
+.pac-partner-row {
+  margin-top: 40px;
+  .pac-card {
+    padding: 0 24px;
+    width: 25%;
+    a,
+    img {
+      width: 100%;
     }
   }
 }
 
 .pac-contact-row {
   height: 150px;
-  background-color: #3b5998;
+  background-color: $primary-color;
 
   .pac-card {
     padding: 12px 8px;
-    color: #eee;
+    color: $accent-color;
     margin: 0;
     width: 100%;
     height: 100%;
@@ -55,15 +147,19 @@
       font-size: 12px;
     }
 
+    a,
+    h4 {
+      color: #e5e5e5 !important;
+    }
+
     h4 {
       margin: 4px 0;
       font-size: 20px;
       font-weight: bold;
     }
     a {
-      color: #c2e4f0 !important;
       &:hover {
-        color: #94bbca !important;
+        color: #9a9a9a !important;
       }
     }
   }
@@ -108,8 +204,61 @@
   }
 }
 
+.pac-features {
+  .pac-card {
+    padding: 12px 8px;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+
+    .pac-body {
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+
+      img {
+        margin: 12px;
+        height: 60px;
+      }
+    }
+
+    h4 {
+      margin: 4px 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+}
+
+.pac-testimonials-row {
+  margin: 50px 0 20px 0;
+  .pac-card {
+    padding: 12px 8px;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+
+    .pac-body {
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+
+      img {
+        margin: 12px;
+        height: 40px;
+      }
+    }
+
+    h4 {
+      margin: 4px 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+}
+
 .pac-logo {
-  width: 200px;
+  width: 180px;
 }
 
 .presentation-page {

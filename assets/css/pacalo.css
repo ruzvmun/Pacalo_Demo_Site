@@ -12758,29 +12758,87 @@ footer {
   height: 550px;
   text-align: left; }
   .pac-page-header .pac-title {
-    font-size: 36px;
+    margin-top: 100px;
+    font-size: 32px;
     font-weight: bold;
     margin-bottom: 20px;
     letter-spacing: normal;
     font-family: "Open Sans", sans-serif; }
+    .pac-page-header .pac-title strong {
+      font-size: 44px;
+      color: #f2ba14; }
   .pac-page-header .pac-description {
-    font-size: 18px; }
+    font-size: 16px; }
+  .pac-page-header .pac-partner-row {
+    padding: 0 24px 0 0;
+    margin-top: 50px; }
+    .pac-page-header .pac-partner-row .pac-card {
+      padding-right: 12px;
+      width: 25%; }
+      .pac-page-header .pac-partner-row .pac-card a {
+        width: 100%; }
+      .pac-page-header .pac-partner-row .pac-card img {
+        width: 80%; }
   @media (max-width: 767.98px) {
     .pac-page-header {
-      height: 400px;
+      height: 300px;
       margin-top: 50px;
       text-align: center; }
       .pac-page-header .pac-title {
         font-size: 24px; }
+        .pac-page-header .pac-title strong {
+          font-size: 30px;
+          color: #f2ba14; }
       .pac-page-header .pac-description {
-        font-size: 14px; } }
+        font-size: 14px; }
+      .pac-page-header .pac-partner-row {
+        padding: 0 10px 0 0;
+        margin-top: 15px; }
+        .pac-page-header .pac-partner-row .pac-card {
+          padding-right: 12px; }
+          .pac-page-header .pac-partner-row .pac-card a {
+            width: 100%; }
+          .pac-page-header .pac-partner-row .pac-card img {
+            width: 100%; } }
+  .pac-page-header .pac-book-us {
+    padding-top: 50px;
+    justify-items: end;
+    align-items: flex-end;
+    color: #e5e5e5; }
+    .pac-page-header .pac-book-us h3 {
+      font-weight: bold; }
+    .pac-page-header .pac-book-us img {
+      height: 300px;
+      width: initial; }
+    @media (max-width: 767.98px) {
+      .pac-page-header .pac-book-us {
+        display: none;
+        visibility: hidden;
+        height: 0;
+        min-height: 0;
+        max-height: 0; } }
+
+.pac-partner-container {
+  width: 70%; }
+  @media (max-width: 767.98px) {
+    .pac-partner-container {
+      width: 100%; } }
+
+.pac-partner-row {
+  margin-top: 40px; }
+  .pac-partner-row .pac-card {
+    padding: 0 24px;
+    width: 25%; }
+    .pac-partner-row .pac-card a,
+    .pac-partner-row .pac-card img {
+      width: 100%; }
 
 .pac-contact-row {
   height: 150px;
-  background-color: #3b5998; }
+  background-color: #0f3664f2; }
   .pac-contact-row .pac-card {
     padding: 12px 8px;
-    color: #eee;
+    color: #f2ba14;
     margin: 0;
     width: 100%;
     height: 100%; }
@@ -12792,14 +12850,15 @@ footer {
       width: 100%;
       text-align: center;
       font-size: 12px; }
+    .pac-contact-row .pac-card a,
+    .pac-contact-row .pac-card h4 {
+      color: #e5e5e5 !important; }
     .pac-contact-row .pac-card h4 {
       margin: 4px 0;
       font-size: 20px;
       font-weight: bold; }
-    .pac-contact-row .pac-card a {
-      color: #c2e4f0 !important; }
-      .pac-contact-row .pac-card a:hover {
-        color: #94bbca !important; }
+    .pac-contact-row .pac-card a:hover {
+      color: #9a9a9a !important; }
   @media (max-width: 767.98px) {
     .pac-contact-row {
       height: 100px; }
@@ -12829,8 +12888,44 @@ footer {
             font-size: 10px;
             font-weight: bold; } }
 
+.pac-features .pac-card {
+  padding: 12px 8px;
+  margin: 0;
+  width: 100%;
+  height: 100%; }
+  .pac-features .pac-card .pac-body {
+    width: 100%;
+    text-align: center;
+    font-size: 12px; }
+    .pac-features .pac-card .pac-body img {
+      margin: 12px;
+      height: 60px; }
+  .pac-features .pac-card h4 {
+    margin: 4px 0;
+    font-size: 20px;
+    font-weight: bold; }
+
+.pac-testimonials-row {
+  margin: 50px 0 20px 0; }
+  .pac-testimonials-row .pac-card {
+    padding: 12px 8px;
+    margin: 0;
+    width: 100%;
+    height: 100%; }
+    .pac-testimonials-row .pac-card .pac-body {
+      width: 100%;
+      text-align: center;
+      font-size: 12px; }
+      .pac-testimonials-row .pac-card .pac-body img {
+        margin: 12px;
+        height: 40px; }
+    .pac-testimonials-row .pac-card h4 {
+      margin: 4px 0;
+      font-size: 20px;
+      font-weight: bold; }
+
 .pac-logo {
-  width: 200px; }
+  width: 180px; }
 
 .presentation-page {
   overflow-x: hidden; }
