@@ -12596,4 +12596,340 @@ footer {
     transform: translate3d(-25px, 0, 0);
     width: 245px; } }
 
-/*# sourceMappingURL=material-kit.css.map */
+.pac-logo {
+  width: 180px; }
+
+.pac-long-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .pac-long-card .pac-icon {
+    width: 30px; }
+  .pac-long-card .pac-image {
+    width: 100px; }
+    .pac-long-card .pac-image img {
+      width: 100%;
+      height: initial; }
+  .pac-long-card .pac-description {
+    flex: 1; }
+  .pac-long-card .pac-body {
+    text-align: left;
+    flex: 1; }
+
+.pac-grey-1 {
+  background-color: #eee; }
+
+.pac-page-header {
+  height: 600px;
+  text-align: left; }
+  .pac-page-header .pac-title {
+    margin-top: 100px;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: normal;
+    font-family: "Open Sans", sans-serif; }
+    .pac-page-header .pac-title strong {
+      font-size: 44px;
+      color: #f2ba14; }
+  .pac-page-header .pac-description {
+    font-size: 16px; }
+  .pac-page-header .pac-partner-row {
+    padding: 0 24px 0 0;
+    margin-top: 50px; }
+    .pac-page-header .pac-partner-row .pac-card {
+      padding-right: 12px;
+      width: 25%; }
+      .pac-page-header .pac-partner-row .pac-card a {
+        width: 100%; }
+      .pac-page-header .pac-partner-row .pac-card img {
+        width: 80%; }
+  @media (max-width: 767.98px) {
+    .pac-page-header {
+      height: 350px;
+      margin-top: 50px;
+      text-align: center; }
+      .pac-page-header .pac-title {
+        font-size: 24px; }
+        .pac-page-header .pac-title strong {
+          font-size: 30px;
+          color: #f2ba14; }
+      .pac-page-header .pac-description {
+        font-size: 14px; }
+      .pac-page-header .pac-partner-row {
+        padding: 0 10px 0 0;
+        margin-top: 15px; }
+        .pac-page-header .pac-partner-row .pac-card {
+          padding-right: 12px; }
+          .pac-page-header .pac-partner-row .pac-card a {
+            width: 100%; }
+          .pac-page-header .pac-partner-row .pac-card img {
+            width: 100%; } }
+  .pac-page-header .pac-book-us {
+    padding-top: 50px;
+    justify-items: end;
+    align-items: flex-end;
+    color: #e5e5e5; }
+    .pac-page-header .pac-book-us h3 {
+      font-weight: bold; }
+    .pac-page-header .pac-book-us img {
+      height: 300px;
+      width: initial; }
+    @media (max-width: 767.98px) {
+      .pac-page-header .pac-book-us {
+        display: none;
+        visibility: hidden;
+        height: 0;
+        min-height: 0;
+        max-height: 0; } }
+
+@media (max-width: 767.98px) {
+  .pac-section {
+    padding-top: 30px; } }
+
+.pac-choose-us-section {
+  background-color: rgba(15, 54, 100, 0.2); }
+  .pac-choose-us-section .pac-testimonials-row {
+    margin: 0 auto;
+    width: 700px; }
+  .pac-choose-us-section .pac-long-card {
+    margin-bottom: 20px; }
+    .pac-choose-us-section .pac-long-card .pac-image {
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      width: 150px;
+      height: 150px;
+      margin: 0 25px;
+      background-color: #fff;
+      border-radius: 50%; }
+      .pac-choose-us-section .pac-long-card .pac-image img {
+        width: initial;
+        height: 80%; }
+    .pac-choose-us-section .pac-long-card .pac-body h4 {
+      font-weight: bold;
+      margin: 0; }
+    .pac-choose-us-section .pac-long-card .pac-body img {
+      height: 20px;
+      margin: -5px; }
+  @media (max-width: 767.98px) {
+    .pac-choose-us-section {
+      width: 100%; }
+      .pac-choose-us-section .pac-testimonials-row {
+        margin: 0;
+        width: 100%; }
+      .pac-choose-us-section .pac-long-card {
+        margin-bottom: 20px; }
+        .pac-choose-us-section .pac-long-card .pac-image {
+          width: 80px;
+          height: 80px;
+          margin: 0 12px; }
+          .pac-choose-us-section .pac-long-card .pac-image img {
+            height: 80%; }
+        .pac-choose-us-section .pac-long-card .pac-body h4 {
+          margin: 0; }
+        .pac-choose-us-section .pac-long-card .pac-body img {
+          height: 20px;
+          margin: -5px; } }
+
+.pac-partner-container {
+  width: 70%; }
+  @media (max-width: 767.98px) {
+    .pac-partner-container {
+      width: 100%; } }
+
+.pac-partner-row {
+  margin-top: 40px; }
+  .pac-partner-row .pac-card {
+    padding: 0 24px;
+    width: 25%; }
+    .pac-partner-row .pac-card a,
+    .pac-partner-row .pac-card img {
+      width: 100%; }
+  @media (max-width: 767.98px) {
+    .pac-partner-row {
+      margin-top: 20px;
+      flex-wrap: wrap; }
+      .pac-partner-row .pac-card {
+        padding: 0 24px;
+        margin-bottom: 20px;
+        width: 50%; }
+        .pac-partner-row .pac-card a,
+        .pac-partner-row .pac-card img {
+          width: 100%; } }
+
+.pac-contact-row {
+  height: 150px;
+  background-color: #0f3664f2; }
+  .pac-contact-row .pac-card {
+    padding: 12px 8px;
+    color: #f2ba14;
+    margin: 0;
+    width: 100%;
+    height: 100%; }
+    .pac-contact-row .pac-card .pac-icon {
+      width: 100%;
+      text-align: center;
+      font-size: 40px; }
+    .pac-contact-row .pac-card .pac-body {
+      width: 100%;
+      text-align: center;
+      font-size: 12px; }
+    .pac-contact-row .pac-card a,
+    .pac-contact-row .pac-card h4 {
+      color: #e5e5e5 !important; }
+    .pac-contact-row .pac-card h4 {
+      margin: 4px 0;
+      font-size: 20px;
+      font-weight: bold; }
+    .pac-contact-row .pac-card a:hover {
+      color: #9a9a9a !important; }
+  @media (max-width: 767.98px) {
+    .pac-contact-row {
+      height: 100px; }
+      .pac-contact-row .col-6 {
+        padding: 0 2px; }
+      .pac-contact-row .pac-card {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-items: left;
+        padding: 8px 8px;
+        text-align: left; }
+        .pac-contact-row .pac-card .pac-icon {
+          width: 25px;
+          font-size: 20px; }
+        .pac-contact-row .pac-card .pac-body {
+          flex: 1;
+          font-size: 10px; }
+          .pac-contact-row .pac-card .pac-body h4 {
+            margin: 2px 0;
+            font-size: 10px;
+            font-weight: bold; }
+          .pac-contact-row .pac-card .pac-body h6 {
+            margin: 2px 0;
+            text-transform: capitalize;
+            font-size: 10px;
+            font-weight: bold; } }
+
+.pac-features .pac-card {
+  padding: 12px 8px;
+  margin: 0;
+  width: 100%;
+  height: 100%; }
+  .pac-features .pac-card .pac-body {
+    width: 100%;
+    text-align: center;
+    font-size: 12px; }
+    .pac-features .pac-card .pac-body img {
+      margin: 12px;
+      height: 60px; }
+  .pac-features .pac-card h4 {
+    margin: 4px 0;
+    font-size: 20px;
+    font-weight: bold; }
+
+.pac-testimonials-row {
+  margin: 50px 0 20px 0; }
+  .pac-testimonials-row .pac-card {
+    padding: 12px 8px;
+    margin: 0;
+    width: 100%;
+    height: 100%; }
+    .pac-testimonials-row .pac-card .pac-body {
+      width: 100%;
+      text-align: center;
+      font-size: 12px; }
+      .pac-testimonials-row .pac-card .pac-body img {
+        margin: 12px;
+        height: 40px; }
+    .pac-testimonials-row .pac-card h4 {
+      margin: 4px 0;
+      font-size: 20px;
+      font-weight: bold; }
+
+.pac-about-us-section {
+  background-color: #0f3664f2;
+  color: #fff; }
+  .pac-about-us-section p,
+  .pac-about-us-section h2,
+  .pac-about-us-section h4,
+  .pac-about-us-section a {
+    color: #fff; }
+  .pac-about-us-section a:hover {
+    color: #dbedf6; }
+  .pac-about-us-section .pac-icon {
+    margin-left: 20px;
+    color: #f2ba14;
+    font-size: 30px; }
+  .pac-about-us-section .pac-section-left {
+    padding-right: 40px;
+    text-align: left; }
+  .pac-about-us-section .pac-section-right {
+    text-align: right; }
+    .pac-about-us-section .pac-section-right a {
+      font-size: 18px; }
+  @media (max-width: 767.98px) {
+    .pac-about-us-section {
+      text-align: center; }
+      .pac-about-us-section .pac-section-left,
+      .pac-about-us-section .pac-section-right {
+        text-align: center;
+        padding: 10px; }
+      .pac-about-us-section .pac-section-right a,
+      .pac-about-us-section .pac-section-right h4 {
+        font-size: 14px; }
+      .pac-about-us-section .pac-card {
+        flex-direction: row-reverse !important;
+        justify-content: center !important; }
+      .pac-about-us-section .pac-icon {
+        margin-left: 0;
+        margin-right: 12px; } }
+
+.pac-image {
+  overflow: hidden; }
+
+.pac-contact-us {
+  font-weight: bold; }
+
+.navbar-nav a {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  padding-top: 2px; }
+
+.navbar-nav .pac-contact-us {
+  font-weight: bold;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  color: #1d4d31;
+  border: 1px solid #1d4d31;
+  border-radius: 12px; }
+  .navbar-nav .pac-contact-us a {
+    font-size: 20px !important;
+    font-weight: 600 !important; }
+
+.parallax {
+  width: 100%;
+  height: 570px;
+  display: block;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }
+
+.navbar-default .logo-container .brand {
+  color: #999999; }
+
+.navbar-transparent .logo-container .brand {
+  color: #ffffff; }
+
+.parallax .parallax-image {
+  width: 100%;
+  overflow: hidden;
+  position: absolute; }
+
+.parallax .parallax-image img {
+  width: 100%; }
+
+/*# sourceMappingURL=pacalo.css.map */

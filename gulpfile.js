@@ -13,8 +13,8 @@ var Paths = {
   SCSS: './assets/scss/**/**'
 };
 
-gulp.task('compile-scss', function() {
-  return gulp.src(Paths.SCSS_TOOLKIT_SOURCES)
+gulp.task('compile-scss', function () {
+  return gulp.src(Paths.SCSS)
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
@@ -22,11 +22,11 @@ gulp.task('compile-scss', function() {
     .pipe(gulp.dest(Paths.CSS));
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
   gulp.watch(Paths.SCSS, gulp.series('compile-scss'));
 });
 
-gulp.task('open', function() {
+gulp.task('open', function () {
   gulp.src('index.html')
     .pipe(open());
 });

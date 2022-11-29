@@ -1578,6 +1578,9 @@ pre {
   .form-control:-ms-input-placeholder {
     color: #6c757d;
     opacity: 1; }
+  .form-control::-ms-input-placeholder {
+    color: #6c757d;
+    opacity: 1; }
   .form-control::placeholder {
     color: #6c757d;
     opacity: 1; }
@@ -3660,6 +3663,12 @@ tbody.collapse.show {
   .alert-dark .alert-link {
     color: #040505; }
 
+@-webkit-keyframes progress-bar-stripes {
+  from {
+    background-position: 1rem 0; }
+  to {
+    background-position: 0 0; } }
+
 @keyframes progress-bar-stripes {
   from {
     background-position: 1rem 0; }
@@ -3689,7 +3698,8 @@ tbody.collapse.show {
   background-size: 1rem 1rem; }
 
 .progress-bar-animated {
-  animation: progress-bar-stripes 1s linear infinite; }
+  -webkit-animation: progress-bar-stripes 1s linear infinite;
+          animation: progress-bar-stripes 1s linear infinite; }
 
 .media {
   display: flex;
@@ -5144,6 +5154,7 @@ button.bg-dark:focus {
   position: fixed !important; }
 
 .position-sticky {
+  position: -webkit-sticky !important;
   position: sticky !important; }
 
 .fixed-top {
@@ -5160,8 +5171,9 @@ button.bg-dark:focus {
   left: 0;
   z-index: 1030; }
 
-@supports (position: sticky) {
+@supports ((position: -webkit-sticky) or (position: sticky)) {
   .sticky-top {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020; } }
@@ -7673,17 +7685,40 @@ label {
 .offline-free-doc .navbar .navbar-collapse .nav-link {
   color: #ffffff; }
 
-@keyframes hinge {
+@-webkit-keyframes hinge {
   0% {
     transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out; }
   20%, 60% {
     transform: rotate3d(0, 0, 1, 80deg);
     transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out; }
   40%, 80% {
     transform: rotate3d(0, 0, 1, 60deg);
     transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    opacity: 1; }
+  to {
+    transform: translate3d(0, 700px, 0);
+    opacity: 0; } }
+
+@keyframes hinge {
+  0% {
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out; }
+  20%, 60% {
+    transform: rotate3d(0, 0, 1, 80deg);
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out; }
+  40%, 80% {
+    transform: rotate3d(0, 0, 1, 60deg);
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
     opacity: 1; }
   to {
@@ -7691,13 +7726,17 @@ label {
     opacity: 0; } }
 
 .hinge {
+  -webkit-animation-name: hinge;
   animation-name: hinge; }
 
 .animated.hinge {
+  -webkit-animation-duration: 2s;
   animation-duration: 2s; }
 
 .animated {
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
 .tim-row {
@@ -8001,6 +8040,7 @@ label {
         color: #ffffff;
         height: 0;
         box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0 inset;
+        -webkit-animation: checkbox-off 0.3s forwards;
         animation: checkbox-off 0.3s forwards; }
   .form-check .form-check-input:focus + .form-check-sign .check:after {
     opacity: 0.2; }
@@ -8009,14 +8049,19 @@ label {
   .form-check .form-check-input:checked ~ .form-check-sign .check:before {
     color: #fff;
     box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+    -webkit-animation: checkbox-on 0.3s forwards;
     animation: checkbox-on 0.3s forwards; }
   .form-check .form-check-input:checked ~ .form-check-sign:before {
+    -webkit-animation: rippleOn 500ms;
     animation: rippleOn 500ms; }
   .form-check .form-check-input:checked ~ .form-check-sign .check:after {
+    -webkit-animation: rippleOn 500ms forwards;
     animation: rippleOn 500ms forwards; }
   .form-check .form-check-input:not(:checked) + .form-check-sign:before {
+    -webkit-animation: rippleOff 500ms;
     animation: rippleOff 500ms; }
   .form-check .form-check-input:not(:checked) + .form-check-sign .check:after {
+    -webkit-animation: rippleOff 500ms;
     animation: rippleOff 500ms; }
   fieldset[disabled] .form-check,
   fieldset[disabled] .form-check .form-check-input,
@@ -8032,6 +8077,14 @@ label {
   .form-check .form-check-input[disabled][checked] + .form-check-sign .check {
     background-color: #000; }
 
+@-webkit-keyframes checkbox-on {
+  0% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px; }
+  50% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px; }
+  100% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px; } }
+
 @keyframes checkbox-on {
   0% {
     box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px; }
@@ -8040,7 +8093,23 @@ label {
   100% {
     box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px; } }
 
+@-webkit-keyframes rippleOn {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0.2; }
+  100% {
+    opacity: 0; } }
+
 @keyframes rippleOn {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0.2; }
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes rippleOff {
   0% {
     opacity: 0; }
   50% {
@@ -8149,7 +8218,8 @@ label {
   .form-check .form-check-input:checked ~ .circle {
     border-color: #9c27b0; }
   .form-check .form-check-input:checked .check:before {
-    animation: checkboxOn .5s forwards; }
+    -webkit-animation: checkboxOn .5s forwards;
+            animation: checkboxOn .5s forwards; }
   .form-check .form-check-input:checked ~ .circle .check {
     transform: scale3d(0.65, 0.65, 1); }
 
@@ -8190,15 +8260,25 @@ label {
   transform: scale3d(2.3, 2.3, 1); }
 
 .form-check .form-check-label .form-check-input:checked + .circle:before {
-  animation: rippleOn .5s; }
+  -webkit-animation: rippleOn .5s;
+          animation: rippleOn .5s; }
 
 .form-check .form-check-label .form-check-input:checked + .circle .check:before {
   color: #FFFFFF;
   box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
-  animation: checkboxOn 0.3s forwards; }
+  -webkit-animation: checkboxOn 0.3s forwards;
+          animation: checkboxOn 0.3s forwards; }
 
 .form-check + .form-check {
   margin-top: 0; }
+
+@-webkit-keyframes checkboxOn {
+  0% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px; }
+  50% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px; }
+  100% {
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px; } }
 
 @keyframes checkboxOn {
   0% {
@@ -9426,6 +9506,8 @@ fieldset[disabled][disabled] .has-rose .form-control, .has-rose .form-control.di
     line-height: 1.1; }
   .bmd-form-group input:-ms-input-placeholder {
     line-height: 1.1; }
+  .bmd-form-group input::-ms-input-placeholder {
+    line-height: 1.1; }
   .bmd-form-group .form-control,
   .bmd-form-group label,
   .bmd-form-group input::placeholder {
@@ -9475,6 +9557,8 @@ fieldset[disabled][disabled] .has-rose .form-control, .has-rose .form-control.di
     line-height: 1.1; }
   .bmd-form-group.bmd-form-group-sm input:-ms-input-placeholder {
     line-height: 1.1; }
+  .bmd-form-group.bmd-form-group-sm input::-ms-input-placeholder {
+    line-height: 1.1; }
   .bmd-form-group.bmd-form-group-sm .form-control,
   .bmd-form-group.bmd-form-group-sm label,
   .bmd-form-group.bmd-form-group-sm input::placeholder {
@@ -9523,6 +9607,8 @@ fieldset[disabled][disabled] .has-rose .form-control, .has-rose .form-control.di
   .bmd-form-group.bmd-form-group-lg input::-moz-placeholder {
     line-height: 1.1; }
   .bmd-form-group.bmd-form-group-lg input:-ms-input-placeholder {
+    line-height: 1.1; }
+  .bmd-form-group.bmd-form-group-lg input::-ms-input-placeholder {
     line-height: 1.1; }
   .bmd-form-group.bmd-form-group-lg .form-control,
   .bmd-form-group.bmd-form-group-lg label,
@@ -9574,6 +9660,9 @@ input::-moz-placeholder {
   line-height: 1.1; }
 
 input:-ms-input-placeholder {
+  line-height: 1.1; }
+
+input::-ms-input-placeholder {
   line-height: 1.1; }
 
 .form-control,
@@ -10214,7 +10303,7 @@ textarea {
 .info {
   max-width: 360px;
   margin: 0 auto;
-  padding: 20px 0 20px; }
+  padding: 70px 0 30px; }
   .info .icon {
     color: #999999; }
     .info .icon > i {
@@ -10590,10 +10679,14 @@ h2.title {
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); }
   .dropdown-menu.showing {
-    animation-name: bmd-dropdown-animation;
-    animation-duration: 0.3s;
-    animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+    -webkit-animation-name: bmd-dropdown-animation;
+            animation-name: bmd-dropdown-animation;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
   .open > .dropdown-menu, .dropdown-menu.show {
     display: block;
     opacity: 1;
@@ -10692,6 +10785,14 @@ h2.title {
   color: #777;
   line-height: 1.42857;
   font-weight: inherit; }
+
+@-webkit-keyframes bmd-dropdown-animation {
+  from {
+    opacity: 0;
+    transform: scale(0); }
+  to {
+    opacity: 1;
+    transform: scale(1); } }
 
 @keyframes bmd-dropdown-animation {
   from {
@@ -11429,7 +11530,8 @@ footer {
       .card .card-header.card-header-image .colored-shadow {
         transform: scale(0.94);
         top: 12px;
-        filter: blur(12px);
+        -webkit-filter: blur(12px);
+                filter: blur(12px);
         position: absolute;
         width: 100%;
         height: 100%;
@@ -12406,7 +12508,8 @@ footer {
     margin-bottom: 15px;
     padding-top: 0;
     height: 300px;
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
     opacity: 1;
     overflow-y: scroll; }
   .navbar.navbar-transparent .navbar-toggler .navbar-toggler-icon {
@@ -12472,6 +12575,17 @@ footer {
       transform: rotate(130deg); }
     100% {
       transform: rotate(135deg); } }
+  @-webkit-keyframes topbar-x {
+    0% {
+      top: 0px;
+      -webkit-transform: rotate(0deg); }
+    45% {
+      top: 6px;
+      -webkit-transform: rotate(145deg); }
+    75% {
+      -webkit-transform: rotate(130deg); }
+    100% {
+      -webkit-transform: rotate(135deg); } }
   @keyframes topbar-back {
     0% {
       top: 6px;
@@ -12483,6 +12597,17 @@ footer {
     100% {
       top: 0px;
       transform: rotate(0); } }
+  @-webkit-keyframes topbar-back {
+    0% {
+      top: 6px;
+      -webkit-transform: rotate(135deg); }
+    45% {
+      -webkit-transform: rotate(-10deg); }
+    75% {
+      -webkit-transform: rotate(5deg); }
+    100% {
+      top: 0px;
+      -webkit-transform: rotate(0); } }
   @keyframes bottombar-x {
     0% {
       bottom: 0px;
@@ -12494,6 +12619,17 @@ footer {
       transform: rotate(-130deg); }
     100% {
       transform: rotate(-135deg); } }
+  @-webkit-keyframes bottombar-x {
+    0% {
+      bottom: 0px;
+      -webkit-transform: rotate(0deg); }
+    45% {
+      bottom: 6px;
+      -webkit-transform: rotate(-145deg); }
+    75% {
+      -webkit-transform: rotate(-130deg); }
+    100% {
+      -webkit-transform: rotate(-135deg); } }
   @keyframes bottombar-back {
     0% {
       bottom: 6px;
@@ -12505,25 +12641,44 @@ footer {
     100% {
       bottom: 0px;
       transform: rotate(0); } }
+  @-webkit-keyframes bottombar-back {
+    0% {
+      bottom: 6px;
+      -webkit-transform: rotate(-135deg); }
+    45% {
+      -webkit-transform: rotate(10deg); }
+    75% {
+      -webkit-transform: rotate(-5deg); }
+    100% {
+      bottom: 0px;
+      -webkit-transform: rotate(0); } }
   .navbar .navbar-toggler .navbar-toggler-icon:nth-child(2) {
     top: 0px;
+    -webkit-animation: topbar-back 500ms linear 0s;
     animation: topbar-back 500ms 0s;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards; }
   .navbar .navbar-toggler .navbar-toggler-icon:nth-child(3) {
     opacity: 1; }
   .navbar .navbar-toggler .navbar-toggler-icon:nth-child(4) {
     bottom: 0px;
+    -webkit-animation: bottombar-back 500ms linear 0s;
     animation: bottombar-back 500ms 0s;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards; }
   .navbar .navbar-toggler.toggled .navbar-toggler-icon:nth-child(2) {
     top: 6px;
+    -webkit-animation: topbar-x 500ms linear 0s;
     animation: topbar-x 500ms 0s;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards; }
   .navbar .navbar-toggler.toggled .navbar-toggler-icon:nth-child(3) {
     opacity: 0; }
   .navbar .navbar-toggler.toggled .navbar-toggler-icon:nth-child(4) {
     bottom: 6px;
+    -webkit-animation: bottombar-x 500ms linear 0s;
     animation: bottombar-x 500ms 0s;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards; } }
 
 @media screen and (max-width: 767px) {
